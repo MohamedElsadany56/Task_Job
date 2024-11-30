@@ -14,7 +14,7 @@
 <body class="post-task">
     <nav class="main-bar">
         <ul>
-            <li><img src="Screenshot_2024-11-30_130305-removebg-preview.png" alt=""></li>
+            <!-- <img src="{% static 'images/Screenshot_2024-11-30_130305-removebg-preview.png' %}" alt=""> -->
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -34,17 +34,7 @@
                 <form id="form" action="{% url 'Task:postTask' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <input type="text" id="UserName" class="UserName" name="title" placeholder="Job Title">
-                    <input type="text" id="location" name="location" placeholder="Enter The Location">
-                    <input type="date" id="deadLine" name="taskDeadline" placeholder="Enter The Deadline">
-                    <select id="status" name="taskStatus">
-                        <option value="">Enter The Status</option>
-                        <option value="new">New</option>
-                        <option value="inprogress">In Progress</option>
-                        <option value="finished">Finished</option>
-                        <option value="canceled">Canceled</option>
-                    </select>
-                    <textarea id="Jop" class="Jop" name="taskDescription" placeholder="Enter A Job Description"></textarea>
+
                     <button type="submit" id="button">Post</button>
                 </form>
                 
