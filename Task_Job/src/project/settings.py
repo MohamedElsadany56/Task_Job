@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'Application',
     'Invoice',
     'Review',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

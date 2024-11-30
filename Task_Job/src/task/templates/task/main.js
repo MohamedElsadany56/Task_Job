@@ -28,3 +28,4 @@ candidate.addEventListener("click", () => {
     isCandidateClicked = false;
   }
 });
+
