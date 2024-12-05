@@ -30,7 +30,7 @@ jobs:
           node-version: '16'
 
       - name: Install and run JavaScript linters
-        working-directory: frontend/
+        working-directory: Task_Job/src/Front_end/
         run: |
           npm install
           npm run lint
