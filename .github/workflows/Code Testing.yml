@@ -38,7 +38,7 @@ jobs:
           pip install -r backend/requirements.txt
 
       - name: Run backend tests
-        working-directory: backend/
+        working-directory: Task_Job/
         run: |
           python manage.py test
 
@@ -48,11 +48,11 @@ jobs:
           node-version: '16'
 
       - name: Install frontend dependencies
-        working-directory: frontend/
+        working-directory: Task_Job/src/Front_end/
         run: |
           npm install
 
       - name: Run frontend tests
-        working-directory: frontend/
+        working-directory: Task_Job/src/Front_end/
         run: |
           npm test
