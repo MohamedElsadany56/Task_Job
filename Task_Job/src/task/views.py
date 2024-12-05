@@ -13,3 +13,15 @@ def post_task(request):
     else:
         form = postTask()
     return render(request, 'task/postTask.html', {'form': form})
+
+def task_list (request):
+    task_list = Task.objects.all()
+    context = {'tasks':task_list}
+    return render(request,'task/task_list.html',context)
+
+
+
+def task_detail(request,id):
+    task_detail = Task.objects.get(id=id)
+    context = {'tasks':task_detail}
+    return render(request,'task/task_detail.html',context)

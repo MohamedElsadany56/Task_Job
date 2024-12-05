@@ -4,10 +4,12 @@
     box-sizing: border-box;
     --mainFontFamily: "Space Grotesk";
 }
-
+/* 
+background: #007BFF;
+color: white; */
 body {
-    background-color: #1E1E1E;
-    color: white;
+    background-color: white;
+    color: #007BFF;
     position: absolute;
     bottom: 40vh;
 }
@@ -16,12 +18,14 @@ body {
     position: absolute;
     top: -7vh;
     left: 37vw;
+    
 }
 .sign-up
 {
     position: absolute;
     top: -18vh;
     left: 37vw;
+    
 }
 header {
     margin: 20px;
@@ -33,6 +37,7 @@ header {
     position: relative;
     bottom: -22vh;
     animation: slide-in 1s ease-out;
+    
 }
 
 header .main-header {
@@ -49,7 +54,7 @@ header .main-header h2 {
 }
 
 header .main-header p {
-    color: #898889;
+    color: white;
     margin-bottom: 5px;
     animation: fade-in 1s ease-out 0.7s both;
 }
@@ -62,6 +67,7 @@ header .main-header p {
     flex-direction: column;
     align-items: center;
     animation: pop-in 1.2s ease-out;
+    
 }
 
 .main-body .form form input, 
@@ -71,7 +77,7 @@ header .main-header p {
     padding: 20px;
     width: 440px;
     border-radius: 7px;
-    background-color: #222222;
+    background-color: #007BFF;
     border: none;
     color: white;
     font-size: 20px;
@@ -84,6 +90,7 @@ header .main-header p {
 .main-body .form form textarea {
     height: 120px;
     padding: 20px;
+    color: white;
 }
 
 .main-body .form form select {
@@ -93,6 +100,7 @@ header .main-header p {
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 20px;
+    
 }
 
 .main-body .form form input:hover,
@@ -102,20 +110,19 @@ header .main-header p {
 .main-body .form form textarea:focus,
 .main-body .form form select:focus {
     outline: none;
-    box-shadow: #6C63FF 0px 0px 10px 2px;
+    box-shadow: #433dad 0px 0px 10px 2px;
     transform: scale(1.03);
 }
 
 .main-body .form form button {
-    background: rgb(169,165,253);
-    background: linear-gradient(76deg, rgba(169,165,253,1) 0%, rgba(235,215,93,1) 100%);
+    background: #035fc2;
     padding: 20px;
     border-radius: 8px;
     cursor: pointer;
     font-family: var(--mainFontFamily);
     font-size: 20px;
     font-weight: bold;
-    color: #222222;
+    color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     width: 440px;
@@ -125,12 +132,12 @@ header .main-header p {
 
 .main-body .form form button:hover {
     transform: translateY(-5px);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 15px;
+    box-shadow: rgba(40, 8, 226, 0.3) 0px 10px 15px;
 }
 
 .main-body .form .registerNow a,
 .main-body .forget-password a {
-    color: #898889;
+    color: #007BFF;
     font-weight: bold;
     position: relative;
     display: inline-block;
@@ -139,7 +146,7 @@ header .main-header p {
 
 .main-body .form .registerNow a:hover,
 .main-body .forget-password a:hover {
-    color: #FFD700;
+    color: white;
     text-decoration: underline;
 }
 
@@ -161,8 +168,8 @@ header .main-header p {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #222222;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #007BFF;
+    box-shadow: 0px 4px 10px rgba(44, 40, 146, 0.5);
     z-index: 1000;
     font-family: var(--mainFontFamily);
     left: 0px;
@@ -195,12 +202,12 @@ header .main-header p {
 }
 
 .main-bar ul li a:hover {
-    color: #FFD700;
+    color: #007BFF;
     transform: scale(1.1);
 }
 
 .main-bar ul li.active a {
-    color: #6C63FF;
+    color: #007BFF;
     text-decoration: underline;
 }
 
@@ -222,7 +229,7 @@ header .main-header p {
 {
     margin-bottom: 4vh;
     text-align: center;
-    background-color: #222222;
+    background-color: #007BFF;
     padding: 30px;
     padding-right:4.9vw;
     font-family: var(--mainFontFamily);
@@ -233,7 +240,7 @@ header .main-header p {
 .main-body .form ul li a 
 {
     text-decoration: none;
-    color: #898889;
+    color: #007BFF;
     font-size:17px;
 
 }
@@ -241,7 +248,7 @@ header .main-header p {
 {
     outline: none;
     border: none;
-    box-shadow: #6C63FF 0px 0px 10px 2px;
+    box-shadow: #007BFF 0px 0px 10px 2px;
     transform: scale(1.03);
     -webkit-transform: scale(1.03);
     -moz-transform: scale(1.03);
@@ -252,7 +259,7 @@ header .main-header p {
 {
     outline: none;
     border: none;
-    box-shadow: #6C63FF 0px 0px 10px 2px;
+    box-shadow: #007BFF 0px 0px 10px 2px;
     transform: scale(1.03);
 
 }

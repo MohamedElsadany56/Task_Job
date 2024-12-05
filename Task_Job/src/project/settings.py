@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'frontpage'
+LOGOUT_REDIRECT_URL = 'frontpage'
+
 
 # Application definition
 
@@ -47,7 +51,7 @@ INSTALLED_APPS = [
     'Application',
     'Invoice',
     'Review',
-    'rest_framework',
+    
 ]
 
 MIDDLEWARE = [
