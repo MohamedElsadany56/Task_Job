@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.shortcuts import redirect
 from django.contrib.auth import views 
+<<<<<<< HEAD
 from User.views import home , signup 
 urlpatterns = [
     #path('user/', user, name='user'),
@@ -30,6 +31,19 @@ urlpatterns = [
     path('login/', views.LoginView.as_view(template_name='login.html'), name='login'),
     path('admin/', admin.site.urls),
     path('tasks/', include('Task.urls', namespace='tasks')),
+=======
+from User.views import frontpage , signup
+
+urlpatterns = [
+    #path('user/', user, name='user'),
+    path('user/', include('User.urls',namespace='user')),
+    path('', frontpage, name='frontpage'),
+    path('signup/', signup, name='signup'),
+    path('logout/', views.LogoutView.as_view(), name='logout'),
+    path('login/', views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('admin/', admin.site.urls),
+    path('tasks/', include('Task.urls',namespace='tasks')),
+>>>>>>> Elsadany
 ]
 
 
