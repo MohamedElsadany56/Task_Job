@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="{% static 'css/task_list.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Task Listings</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for Task..." oninput="filterJobs()">
+      <select id="jobTypeFilter" onchange="filterJobs()">
+        <option value="all">All Types</option>
+        <option value="full-time">Full-Time</option>
+        <option value="part-time">Part-Time</option>
+        <option value="remote">Remote</option>
+      </select>
+    </div>
+  </header>
+  <main>
+    <ul id="TaskList">
+      <ul id="taskList">
+        {% for task in tasks %}
+        <li class="Task-item" data-type="{{ Task.type }}">
+          <div class="Task-details">
+            <h2> {{ task.title }}</h2>
+            <p>publishedAt: {{ task.publishedAt }}</p>
+
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </ul>
+  </main>
+  <script src="{% static 'js/task_list.js' %}"></script>
+</body>
+</html>
